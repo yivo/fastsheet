@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require_relative 'bm'
+
+BM.use_gem 'roo'
+
+BM.run!('roo', 5) do
+  for i in 1..10000000; a = '1'; end
+end
